@@ -1,5 +1,6 @@
 <?php 
 
+
 $servername="localhost";
 $username="root";
 $pass="root";
@@ -54,6 +55,7 @@ function createTable() {
     } else {
       echo "Error creating table: " . $conn->error;
     }
+
   }
   catch(Exception $e) {
     echo 'Message: ' .$e->getMessage();
@@ -126,7 +128,7 @@ function insertValue($first_name, $last_name, $email, $dob, $contact, $password)
   }
   finally {
     $conn->close();
-  }
+  } 
 }
 
 // createDatabase();

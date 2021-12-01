@@ -1,3 +1,40 @@
 body {
   background-color: aqua;
 }
+// .profile {
+//   width: fit-content;
+// }
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+nav a {
+  margin-left: 20px;
+}
+
+nav a:link {
+  text-decoration: none;
+  color: blue;
+}
+
+nav a:visited {
+  text-decoration: none;
+  color: blue;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: bold;
+}
+// .icon {
+//   display: inline-block;
+//   width: 1em;
+//   height: 1em;
+  // stroke-width: 0;
+  // stroke: currentColor;
+  // fill: currentColor;
+// }

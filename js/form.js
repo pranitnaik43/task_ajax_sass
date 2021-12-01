@@ -87,7 +87,8 @@ function login() {
   for (let [key, val] of formData.entries()) {
     Object.assign(data, { [key]: val });
   }
-  if(!data.email) {
+  let email = data.email;
+  if(!email) {
     alert("Email cannot be empty");
     return false;
   }
@@ -107,6 +108,7 @@ function login() {
       }
       if(data["success"]===true) {
         //redirect to home on success
+        document.cookie = JSON.stringify({email: email});
         window.location.href = "index.html";
       }
     },

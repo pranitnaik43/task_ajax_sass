@@ -2,4 +2,31 @@ body {
   background-color: aqua;
 }
 
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+nav a {
+  margin-left: 20px;
+}
+
+nav a:link {
+  text-decoration: none;
+  color: blue;
+}
+
+nav a:visited {
+  text-decoration: none;
+  color: blue;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: bold;
+}
+
 /*# sourceMappingURL=styles.css.map */
