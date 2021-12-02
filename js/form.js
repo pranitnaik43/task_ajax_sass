@@ -108,7 +108,7 @@ function login() {
       }
       if(data["success"]===true) {
         //redirect to home on success
-        document.cookie = JSON.stringify({email: email});
+        document.cookie = "email=" + email;
         window.location.href = "index.html";
       }
     },

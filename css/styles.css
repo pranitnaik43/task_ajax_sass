@@ -13,20 +13,16 @@ nav a {
 
 nav a:link {
   text-decoration: none;
-  color: blue;
+  color: green;
 }
 
 nav a:visited {
   text-decoration: none;
-  color: blue;
+  color: green;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
-a:active {
-  text-decoration: bold;
+nav a:hover {
+  color: yellowgreen;
 }
 
 /*# sourceMappingURL=styles.css.map */

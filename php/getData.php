@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     return;
   }
   
-  print_r(json_encode((object)["success"=>false, "message"=>"Login failed"]));
+  print_r(json_encode((object)["success"=>false, "message"=>"Data not found"]));
 }
  
 ?>

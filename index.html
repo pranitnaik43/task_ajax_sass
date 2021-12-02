@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,42 +10,51 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <!-- <Bootstrap> -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <!-- </Bootstrap> -->
 
   <link rel="stylesheet" href="./css/styles.css" />
 
 </head>
+
 <body>
-  <nav class="my-2 mx-5">
-    <a href="index.html">Home</a>
-    <!-- <a id="loginLink" href="login.html">Login</a>
+  <div class="d-flex mx-4 my-4">
+    <nav class="ml-auto">
+      <a href="index.html">Home</a>
+      <!-- <a id="loginLink" href="login.html">Login</a>
     <a id="registerLink" href="register.html">Register</a> -->
-    <button id="logout" class="btn btn-outline-secondary mx-3">Logout</a>
-  </nav>
+      <button id="logout" class="btn btn-outline-secondary mx-3">Logout</a>
+    </nav>
+  </div>
 
   <div class="container">
     <div class="d-flex mx-3 mt-5">
-      <div class="mx-auto bg-dark text-warning p-5 profile">
-        
-        <div class="p-1" id="nameVal"> FirstName LastName </div>
-        <div class="p-1">
-          <img class="icon mr-2" src="icons/email.svg"></img>
-          <span id="emailVal"></span>
+      <div class="mx-auto bg-dark text-light p-5 profile">
+        <div class="row">
+          <div class="col-6 d-flex">
+            <img src="icons/avatar.svg" alt="avatar" class="mx-auto w-50 rounded-circle">
+          </div>
+          <div class="col-6">
+            <div class="p-1" id="nameVal"></div>
+            <div class="p-1">
+              <img class="icon mr-2" src="icons/email.svg"></img>
+              <span id="emailVal">Email</span>
+            </div>
+            <div class="p-1">
+              <img class="icon bg-warning mr-2" src="icons/contact.svg"></img>
+              <span id="contactVal">Contact</span>
+            </div>
+            <div class="p-1" id="dobVal"></div>
+            <div class="p-1" id="ageVal"></div>
+          </div>
         </div>
-        <div class="p-1">
-          <img class="icon bg-warning mr-2" src="icons/contact.svg"></img>
-          <span id="contactVal"></span>
-        </div>
-        <div class="p-1" id="dobVal"></div>
-        <div class="p-1" id="ageVal"></div>
-
       </div>
     </div>
   </div>
 
   <script src="./js/index.js"></script>
 </body>
+
 </html>

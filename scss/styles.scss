@@ -15,21 +15,18 @@ nav a {
 
 nav a:link {
   text-decoration: none;
-  color: blue;
+  color: green;
 }
 
 nav a:visited {
   text-decoration: none;
-  color: blue;
+  color: green;
 }
 
-a:hover {
-  text-decoration: underline;
+nav a:hover {
+  color: yellowgreen;
 }
 
-a:active {
-  text-decoration: bold;
-}
 // .icon {
 //   display: inline-block;
 //   width: 1em;

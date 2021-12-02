@@ -6,19 +6,38 @@ function calculateAge(dob) {
   return Math.floor((new Date() - new Date(dob).getTime()) / 3.15576e+10)
 }
 
+function getCookieValue(name) {
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let cookies = decodedCookie.split(";");
+  for(let cookie of cookies) {
+    cookie = cookie.trim();
+    pair = cookie.split("=");
+    if(pair.length>1) {
+      key = pair[0];
+      value = pair[1];
+      if(key===name) {
+        return value;
+      }
+    }
+  }
+  return -1;
+}
+
+function clearCookie(name) {
+  document.cookie = name + '=; expires='+new Date(0).toUTCString();;
+}
+
 $('#logout').on("click", function() {
-  document.cookie = "";
-  
+  clearCookie("email");
+  redirectToLogin();
 })
 
 $(document).ready(function() {
   try {
-    let cookie = document.cookie;
-    let cookieObj = JSON.parse(cookie);
-    let email = cookieObj.email;
+    let email = getCookieValue("email");
     if(!email)  redirectToLogin();
   
-    console.log(cookie, cookieObj)
+    console.log("email",email)
 
     $.ajax({
       method: 'GET',
@@ -28,7 +47,7 @@ $(document).ready(function() {
         // console.log("success", response, typeof response);
         let responseObj = JSON.parse(response);
         let data = responseObj.data;
-        console.log("data",data, typeof data)
+        // console.log("data",data, typeof data)
         if(responseObj["success"]===true) {
           console.log("check", $("#emailVal"));
           if(data.first_name && data.last_name) 
@@ -45,7 +64,7 @@ $(document).ready(function() {
           }
         }
         else {
-          window.location.href = "login.html";
+          redirectToLogin();
         }
       },
       error: function (data) {
